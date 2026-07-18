@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Pedidos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #2C3E50; color: white; }
+        .status { padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; }
+        .status.pendiente { background: #F1C40F; color: #7F8C8D; }
+        .status.entregado { background: #2ECC71; color: white; }
+    </style>
+</head>
+<body style="background-color: #FDFBF7; margin:0; font-family: sans-serif;">
+
+    <header class="navbar" style="background-color: #2C3E50;">
+        <div class="logo">👑 Admin - The Boar Hat</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="pedidos.html" class="active">Pedidos</a></li>
+        </ul>
+    </header>
+
+    <main class="container" style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+        <h2>Monitoreo de Pedidos</h2>
+        <p>Revisa y cambia el estado de las órdenes de los clientes en tiempo real.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Detalle de Productos</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1002</td>
+                    <td>Meliodas</td>
+                    <td>1x Pastel Vegano de Chocolate (+ Etiquetas Saludables)</td>
+                    <td>$450.00</td>
+                    <td><span class="status pendiente">Pendiente</span></td>
+                    <td><button onclick="cambiarEstado(this)" style="padding: 5px 10px; cursor:pointer;">Marcar Entregado</button></td>
+                </tr>
+                <tr>
+                    <td>#1001</td>
+                    <td>Elizabeth Lones</td>
+                    <td>2x Tres Leches con Durazno</td>
+                    <td>$800.00</td>
+                    <td><span class="status entregado">Entregado</span></td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        function cambiarEstado(btn) {
+            const tr = btn.closest('tr');
+            const statusSpan = tr.querySelector('.status');
+            statusSpan.textContent = "Entregado";
+            statusSpan.className = "status entregado";
+            btn.remove();
+        }
+    </script>
+</body>
+</html>
