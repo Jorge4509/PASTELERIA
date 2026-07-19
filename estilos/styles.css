@@ -1,0 +1,71 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+body { background-color: #fbf9f6; color: #4a3f35; }
+
+/* NAVBAR COMPACTO CORREGIDO */
+.main-header {
+    background-color: #ffffff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 12px 5%; 
+    border-bottom: 2px solid #e8e2da;
+}
+.logo { display: flex; align-items: center; gap: 15px; }
+
+/* TAMAÑO VISIBLE PARA CLIENTE Y ADMIN */
+.header-logo-img {
+    width: 65px; 
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #2c4a3e;
+}
+.logo h1 { font-size: 24px; color: #2c4a3e; font-weight: 700; }
+.nav-links a { text-decoration: none; color: #8c7864; margin-left: 25px; font-weight: 600; font-size: 14px; }
+.nav-links a:hover, .nav-links a.active { color: #2c4a3e; }
+
+/* LAYOUT DE LA TIENDA */
+.tienda-container { display: flex; max-width: 1200px; margin: 40px auto; padding: 0 20px; gap: 30px; }
+.catalogo-productos { flex: 2; }
+h2 { color: #2c4a3e; font-size: 28px; margin-bottom: 5px; }
+.subtitle-page { font-size: 14px; color: #8c7864; margin-bottom: 30px; }
+
+/* GRID Y TARJETAS */
+.grid-pasteles { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+.pastel-card { background: white; border: 1px solid #e8e2da; padding: 20px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.card-badge { position: absolute; top: 15px; right: 15px; background: #e6ede9; color: #2c4a3e; padding: 4px 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; border-radius: 3px; }
+
+/* ESPACIO PARA FOTOS EN EL CLIENTE */
+.pastel-img-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #fbf9f6;
+    border: 1px dashed #e8e2da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.pastel-card h3 { font-size: 18px; color: #2c4a3e; margin: 10px 0; }
+.descripcion { font-size: 13px; color: #7a6c5f; line-height: 1.5; margin-bottom: 20px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+.precio { font-weight: bold; color: #2c4a3e; font-size: 16px; }
+
+.btn-seleccionar { background: white; border: 1px solid #2c4a3e; color: #2c4a3e; padding: 8px 16px; cursor: pointer; font-weight: bold; font-size: 13px; transition: 0.2s; }
+.btn-seleccionar:hover, .pastel-card.seleccionada .btn-seleccionar { background: #2c4a3e; color: white; }
+.pastel-card.seleccionada { border-color: #2c4a3e; box-shadow: 0 0 10px rgba(44, 74, 62, 0.1); }
+
+/* SIDEBAR DE RESERVAS */
+.sidebar-box { flex: 1; background: white; border: 1px solid #e8e2da; padding: 30px 25px; height: fit-content; position: sticky; top: 40px; }
+.sidebar-box h3 { color: #2c4a3e; border-bottom: 1px solid #e8e2da; padding-bottom: 10px; margin-bottom: 20px; }
+.resumen-vacio { color: #baaf9f; font-style: italic; font-size: 14px; text-align: center; padding: 20px 0; }
+.item-resumen { font-size: 14px; margin-bottom: 10px; color: #4a3f35; }
+.info-pago-box { background: #fbf9f6; padding: 15px; margin: 20px 0; border-left: 3px solid #2c4a3e; }
+.info-pago-box p { font-size: 14px; margin-bottom: 5px; }
+.anticipo-destacado { font-weight: bold; color: #2c4a3e; font-size: 15px; }
+.input-apartado { margin-bottom: 20px; }
+.input-apartado label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
+.input-apartado input { width: 100%; padding: 10px; border: 1px solid #e8e2da; font-size: 14px; }
+.btn-enviar { background: #2c4a3e; color: white; border: none; width: 100%; padding: 14px; font-size: 14px; font-weight: bold; cursor: pointer; }
+.btn-enviar:hover { background: #1e332b; }
+.hidden { display: none; }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin | Alta de Pasteles</title>
+    <link rel="stylesheet" href="../estilos/admin-dashboard.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="../src/logo.jpeg" alt="Logo The Boarthat" class="header-logo-img">
+            <h1>The Boarthat - Panel</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="../índice.html">Ver Tienda</a>
+            <a href="admin-dashboard.html" class="active">Registrar Pastel</a>
+            <a href="pedidos.html">📥 Solicitudes</a>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="form-box">
+            <h2>Registrar Nueva Creación</h2>
+            <p class="subtitle">Ingresa los datos del pastel. El sistema extraerá alérgenos automáticos en español.</p>
+            
+            <form id="form-admin-pastel">
+                <div class="input-group">
+                    <label>Nombre del Pastel:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Pastel Ópera Selva Verde" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Precio Comercial ($ MXN):</label>
+                    <input type="number" id="precio" placeholder="580" required>
+                </div>
+
+                <!-- Carga de Imagen -->
+                <div class="input-group">
+                    <label>Imagen del Pastel:</label>
+                    <input type="file" id="imagen-pastel" accept="image/*">
+                    <small style="color: #8c7864; font-style: italic;">Selecciona una foto descriptiva para el catálogo.</small>
+                </div>
+
+                <div class="input-group">
+                    <label>Ingredientes por línea (cantidades explícitas):</label>
+                    <textarea id="ingredientes" rows="4" placeholder="Ej:&#10;10g polvo de matcha&#10;100g harina de almendra" required></textarea>
+                    <button type="button" id="btn-edamam" class="btn-secundario">🔍 Mapear Dieta con Edamam</button>
+                </div>
+
+                <div class="resultado-api-box">
+                    <label>Etiquetas Nutritivas Detectadas:</label>
+                    <div id="tags-resultado" class="tags-resultado">
+                        <span class="placeholder-tag">Ninguna receta analizada todavía.</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-guardar">💾 Guardar en Catálogo</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

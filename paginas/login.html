@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The Boarthat | Iniciar Sesión</title>
+    <style>
+        body { background-color: #fbf9f6; font-family: 'Georgia', serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 40px; border: 1px solid #e8e2da; width: 100%; max-width: 400px; text-align: center; }
+        .login-logo { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #2c4a3e; object-fit: cover; margin-bottom: 15px; }
+        h2 { color: #2c4a3e; margin-bottom: 25px; }
+        .group { text-align: left; margin-bottom: 20px; }
+        label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: #4a3f35; }
+        input { width: 100%; padding: 12px; border: 1px solid #e8e2da; background: #fbf9f6; outline: none; }
+        input:focus { border-color: #2c4a3e; }
+        button { width: 100%; padding: 14px; background: #2c4a3e; color: white; border: none; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        button:hover { background: #1e332b; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <img src="../src/logo.jpeg" alt="Logo" class="login-logo">
+        <h2>The Boarthat</h2>
+        <form id="form-login">
+            <div class="group">
+                <label>Correo Electrónico:</label>
+                <input type="email" id="email" required placeholder="tu@correo.com">
+            </div>
+            <div class="group">
+                <label>Contraseña:</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+            <button type="submit">Ingresar al Sistema</button>
+        </form>
+    </div>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

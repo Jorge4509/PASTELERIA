@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The Boarthat | Análisis Nutricional</title>
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <style>
+        .box-nutricion { max-width: 600px; margin: 50px auto; background: white; border: 1px solid #e8e2da; padding: 30px; }
+        select { width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #e8e2da; font-family: 'Georgia', serif; }
+        button { background: #2c4a3e; color: white; width: 100%; padding: 12px; border: none; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="../src/logo.jpeg" alt="Logo" class="header-logo-img">
+            <h1>The Boarthat</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="../índice.html">Tienda</a>
+            <a href="nutricion.html" class="active">Análisis Nutricional</a>
+            <a href="pedidos-cliente.html">Mis Pedidos</a>
+            <a href="login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <div class="box-nutricion">
+        <h2>Transparencia Alimentaria</h2>
+        <p>Selecciona una receta para consultar la certificación de alérgenos directo de Edamam.</p>
+        <select id="select-pastel-nutricion">
+            <option value="">-- Elige un Pastel --</option>
+            <option value="1">Pastel Ópera Selva Verde</option>
+            <option value="2">Tarta de Zanahoria Especiada</option>
+        </select>
+        <button id="btn-auditar-pastel">Auditar Receta</button>
+        <div id="resultado-edamam" class="hidden" style="margin-top: 25px;"></div>
+    </div>
+    <script src="../js/nutricion.js"></script>
+</body>
+</html>

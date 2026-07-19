@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boarthat | Catálogo Gourmet</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="src/logo.jpeg" alt="The Boarthat Logo" class="header-logo-img">
+            <h1>The Boarthat</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="índice.html" class="active">Tienda</a>
+            <a href="paginas/nutricion.html">Análisis Nutricional</a>
+            <a href="paginas/pedidos-cliente.html">Mis Pedidos</a>
+            <a href="paginas/login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="tienda-container">
+        <section class="catalogo-productos">
+            <h2>Nuestras Creaciones Artesanales</h2>
+            <p class="subtitle-page">Aparta tu pastel favorito liquidando únicamente el 50% de anticipo.</p>
+            
+            <div class="grid-pasteles">
+                <!-- Pastel 1 -->
+                <div class="pastel-card" data-id="1" data-nombre="Pastel Ópera Selva Verde" data-precio="580">
+                    <div class="card-badge">Especialidad</div>
+                    <div class="pastel-img-placeholder">
+                        <span style="color: #8c7864; font-size: 12px; font-style: italic;">🖼️ Foto de Pastel Ilustrativa</span>
+                    </div>
+                    <h3>Pastel Ópera Selva Verde</h3>
+                    <p class="descripcion">Exquisito bizcocho de almendras infusionado con matcha orgánico y crema de café espresso.</p>
+                    <div class="card-footer">
+                        <span class="precio">$580.00 MXN</span>
+                        <button class="btn-seleccionar">Seleccionar</button>
+                    </div>
+                </div>
+
+                <!-- Pastel 2 -->
+                <div class="pastel-card" data-id="2" data-nombre="Tarta de Zanahoria Especiada" data-precio="490">
+                    <div class="card-badge">Bajo en Azúcar</div>
+                    <div class="pastel-img-placeholder">
+                        <span style="color: #8c7864; font-size: 12px; font-style: italic;">🖼️ Foto de Pastel Ilustrativa</span>
+                    </div>
+                    <h3>Tarta de Zanahoria Especiada</h3>
+                    <p class="descripcion">Elaborado con harina integral, nuez moscada y endulzado sutilmente con miel de agave pura.</p>
+                    <div class="card-footer">
+                        <span class="precio">$490.00 MXN</span>
+                        <button class="btn-seleccionar">Seleccionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar-box">
+            <h3>Resumen de Apartado</h3>
+            <div id="contenedor-resumen" class="resumen-vacio">
+                <p>No has seleccionado ningún pastel artesanal todavía.</p>
+            </div>
+            
+            <form id="form-apartado" class="hidden">
+                <div class="info-pago-box">
+                    <p>Total: <span id="resumen-total">$0.00</span></p>
+                    <p class="anticipo-destacado">Anticipo requerido (50%): <span id="resumen-anticipo">$0.00</span></p>
+                </div>
+                <div class="input-apartado">
+                    <label for="fecha-entrega">Fecha de Entrega:</label>
+                    <input type="date" id="fecha-entrega" required>
+                </div>
+                <button type="submit" class="btn-enviar">Proceder al Apartado del 50%</button>
+            </form>
+        </aside>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
